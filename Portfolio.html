@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhi Sharma — Frontend Developer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#2563eb;
+    --muted:#6b7280;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Roboto,Arial;
+    background:var(--bg);
+    color:#0f172a;
+    line-height:1.45;
+  }
+
+  /* NAV */
+  .nav {
+    position:sticky; top:0; z-index:60;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.6));
+    border-bottom:1px solid rgba(15,23,42,0.05);
+  }
+  .nav .wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+  .logo{font-weight:700;color:var(--accent);letter-spacing:0.5px}
+  .menu{display:flex;gap:22px;align-items:center}
+  .menu a{color:var(--muted);text-decoration:none;font-weight:600}
+  .menu a:hover{color:var(--accent)}
+  .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;font-weight:600;border:none;cursor:pointer}
+  .burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+
+  /* HERO */
+  .hero{
+    min-height:68vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(180deg, rgba(37,99,235,0.09), rgba(96,165,250,0.03));
+  }
+  .hero .box{max-width:920px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+    padding:40px;border-radius:18px;box-shadow:0 10px 30px rgba(16,24,40,0.06);}
+  .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(37,99,235,0.12);color:var(--accent);font-weight:600;margin-bottom:14px}
+  h1{font-size:2.3rem;margin:6px 0 8px;}
+  p.lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+  .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-primary{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+  .btn-ghost{border:1px solid rgba(15,23,42,0.06);padding:10px 16px;border-radius:10px;background:#fff;color:var(--muted);cursor:pointer}
+
+  /* LAYOUT CONTAINER */
+  .container{max-width:1100px;margin:0 auto;padding:50px 20px}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1fr 380px;gap:34px;align-items:center}
+  .about .text h2{margin-top:0}
+  .about p{color:var(--muted)}
+  .profile-img{width:100%;border-radius:15px;object-fit:cover;box-shadow:0 12px 30px rgba(2,6,23,0.08);}
+
+  /* PROFILE CARD */
+  .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 8px 28px rgba(2,6,23,0.06);text-align:center}
+  .avatar{width:120px;height:120px;border-radius:999px;object-fit:cover;margin:0 auto 12px;display:block}
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+  .skill{background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(37,99,235,0.02));padding:8px;border-radius:10px}
+  .skill .label{font-weight:600;color:#0f172a;font-size:0.95rem}
+  .bar{height:8px;background:rgba(15,23,42,0.06);border-radius:8px;margin-top:8px;overflow:hidden}
+  .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7dd3fc)}
+
+  /* PROJECTS */
+  .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+  .project{
+    position:relative;border-radius:12px;overflow:hidden;cursor:pointer;background:#111;height:220px;color:#fff;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background-size:cover;background-position:center;
+    box-shadow:0 10px 30px rgba(2,6,23,0.08);transition:transform .28s ease, box-shadow .28s ease;
+  }
+  .project:hover{transform:translateY(-8px);box-shadow:0 18px 48px rgba(2,6,23,0.14)}
+  .project .meta{backdrop-filter: blur(6px);background:rgba(0,0,0,0.28);padding:8px;border-radius:10px;font-weight:700}
+  .project .desc{font-size:0.95rem;color:rgba(255,255,255,0.92);margin-top:8px}
+
+  /* SERVICES + PRODUCT */
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  .service-list{display:flex;flex-direction:column;gap:12px}
+  .service{background:var(--card);padding:14px;border-radius:12px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(2,6,23,0.04)}
+  .icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+
+  .product-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.06)}
+  .product-card img{width:100%;height:220px;object-fit:cover;display:block}
+  .product-card .info{padding:16px}
+  .price{font-weight:700;color:var(--accent)}
+
+  /* FORMS (SIMPLIFIED & FIXED) */
+  /* form wrapper ensures form is always on top and has clear white surface */
+  .form-container{
+    background:var(--card);
+    padding:22px;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(2,6,23,0.06);
+    max-width:880px;
+    margin:18px auto;
+    position:relative;
+    z-index:80; /* ensures it stays above background images */
+  }
+
+  /* layout rows - two columns on desktop, stack on mobile */
+  .form-row{
+    display:flex;
+    gap:12px;
+    margin-bottom:12px;
+  }
+  .form-field{flex:1; display:flex; flex-direction:column;}
+  label{font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+  input[type="text"], input[type="email"], input[type="password"], textarea{
+    padding:10px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);font-size:0.95rem;
+    background:transparent;
+    outline:none;
+  }
+  textarea{resize:vertical;min-height:110px;padding:12px;}
+  .form-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px}
+  .primary-btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+  .secondary-btn{background:transparent;border:1px solid rgba(15,23,42,0.08);padding:10px 14px;border-radius:10px;cursor:pointer}
+
+  /* tiny note under form */
+  .form-note{font-size:0.9rem;color:var(--muted);margin-top:10px}
+
+  /* GRID BOXES */
+  .box-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+  .box{background:linear-gradient(180deg,#2563eb,#60a5fa);color:#fff;padding:22px;border-radius:12px;text-align:center;font-weight:700}
+
+  footer{padding:28px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+  /* RESPONSIVE */
+  @media(max-width:980px){
+    .projects-grid{grid-template-columns:repeat(2,1fr)}
+    .about{grid-template-columns:1fr}
+    .services{grid-template-columns:1fr}
+    .skills-grid{grid-template-columns:repeat(2,1fr)}
+    .menu{display:none}
+    .burger{display:block}
+  }
+  @media(max-width:720px){
+    .projects-grid{grid-template-columns:1fr}
+    .box-grid{grid-template-columns:repeat(2,1fr)}
+    .form-row{flex-direction:column}
+  }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="wrap">
+      <div class="logo">Abhi<span style="color:var(--accent)">.</span></div>
+
+      <nav aria-label="Main navigation" class="menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire me</button>
+      </nav>
+
+      <button class="burger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="2" rx="1" fill="#111"/><rect y="6" width="22" height="2" rx="1" fill="#111"/><rect y="12" width="22" height="2" rx="1" fill="#111"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="box" role="region" aria-label="Introduction">
+      <div class="kicker">Frontend Developer</div>
+      <h1>Hi, I'm Abhi Sharma — I build clean, performant websites.</h1>
+      <p class="lead">I design and code fast, accessible, responsive front-ends. Below you’ll find projects, services, a product sample, and contact forms — everything your assignment asked, integrated as a single professional site.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ABOUT -->
+    <section class="container" id="about" aria-labelledby="about-heading">
+      <div class="about">
+        <div class="text">
+          <h2 id="about-heading">About & Education</h2>
+          <p>I’m a frontend developer learning full-stack practices. I focus on simplicity, performance and UX. I enjoy solving UI problems and turning designs into production code.</p>
+
+          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:16px">
+            <div style="min-width:220px">
+              <h4 style="margin:6px 0">Top Movies</h4>
+              <ol style="color:var(--muted)"><li>Inception</li><li>Interstellar</li><li>The Dark Knight</li></ol>
+            </div>
+            <div style="min-width:220px">
+              <h4 style="margin:6px 0">Favorite Foods</h4>
+              <ul style="color:var(--muted)"><li>Pizza</li><li>Biryani</li><li>Ice Cream</li></ul>
+            </div>
+          </div>
+
+          <h4 style="margin-top:18px">Marks</h4>
+          <table aria-label="Marks table" role="table">
+            <thead><tr><th>Subject</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>Math</td><td>90</td></tr>
+              <tr><td>Science</td><td>85</td></tr>
+              <tr><td>English</td><td>88</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="card" aria-label="Profile card">
+          <img class="avatar" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=500&q=80&auto=format&fit=crop" alt="Abhi profile">
+          <h3 style="margin:6px 0">Abhi Sharma</h3>
+          <div style="color:var(--muted);margin-bottom:8px">Frontend Developer</div>
+          <div class="small" style="margin-bottom:12px">Location: India • Email: abhi@example.com</div>
+
+          <div>
+            <div style="font-weight:700;margin-bottom:8px">Skills</div>
+            <div class="skills-grid">
+              <div class="skill"><div class="label">HTML</div><div class="bar"><i style="width:96%"></i></div></div>
+              <div class="skill"><div class="label">CSS</div><div class="bar"><i style="width:92%"></i></div></div>
+              <div class="skill"><div class="label">JavaScript</div><div class="bar"><i style="width:82%"></i></div></div>
+              <div class="skill"><div class="label">Responsive</div><div class="bar"><i style="width:88%"></i></div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="container" id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="projects-grid" role="list">
+        <article class="project" role="listitem" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop')">
+          <div class="meta">Portfolio Site</div>
+          <div class="desc">Single page portfolio with responsive grid, animations, and contact forms.</div>
+        </article>
+
+        <article class="project" role="listitem" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80&auto=format&fit=crop')">
+          <div class="meta">UI Clone</div>
+          <div class="desc">Pixel-perfect clone of a modern landing page with accessible components.</div>
+        </article>
+
+        <article class="project" role="listitem" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop')">
+          <div class="meta">E-commerce Card</div>
+          <div class="desc">Product card & checkout demo with responsive UI and micro interactions.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES + PRODUCT -->
+    <section class="container" id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services & Product</h2>
+      <div class="services">
+        <div class="service-list">
+          <div class="service">
+            <div class="icon">UI</div>
+            <div>
+              <div style="font-weight:700">Web UI Development</div>
+              <div class="small">Responsive, accessible and component-driven UI</div>
+            </div>
+          </div>
+          <div class="service">
+            <div class="icon">R</div>
+            <div>
+              <div style="font-weight:700">Responsive Design</div>
+              <div class="small">Layouts that look great on any device</div>
+            </div>
+          </div>
+          <div class="service">
+            <div class="icon">P</div>
+            <div>
+              <div style="font-weight:700">Performance</div>
+              <div class="small">Fast loading and optimized assets</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="product-card" aria-label="Sample product">
+            <img src="https://images.unsplash.com/photo-1510557880182-3eec68dfe8a0?w=1200&q=80&auto=format&fit=crop" alt="Product sample">
+            <div class="info">
+              <h3 style="margin:6px 0">Sample Product</h3>
+              <div class="small">Clean UI mockup, responsive and accessible</div>
+              <div style="margin-top:10px"><span class="price">$499</span></div>
+              <div style="margin-top:12px"><button class="btn-primary" onclick="alert('Demo buy clicked')">Buy Now</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & FORMS (FIXED) -->
+    <section class="container" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact & Forms</h2>
+
+      <!-- Combined contact form (single professional surface) -->
+      <div class="form-container" aria-label="Contact form">
+        <form id="contactForm" onsubmit="event.preventDefault(); alert('Message submitted (demo)')">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="text" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Project / Message subject">
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-bottom:6px">
+            <div class="form-field" style="flex:1">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Describe your project or question" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="secondary-btn" onclick="document.getElementById('contactForm').reset()">Reset</button>
+            <button type="submit" class="primary-btn">Send Message</button>
+          </div>
+
+          <div class="form-note">By clicking Send Message you agree to be contacted. (Demo mode)</div>
+        </form>
+      </div>
+
+      <!-- Registration form (kept simple and consistent) -->
+      <div class="form-container" aria-label="Registration form">
+        <form onsubmit="event.preventDefault(); alert('Registered (demo)')">
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:200px">
+              <label>Name</label>
+              <input type="text" placeholder="Full name" required>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <label>Email</label>
+              <input type="email" placeholder="you@domain.com" required>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label>Password</label>
+            <input type="password" placeholder="Choose a password" required>
+          </div>
+
+          <div style="margin-top:10px">
+            <label><input type="radio" name="gender"> Male</label>
+            <label style="margin-left:10px"><input type="radio" name="gender"> Female</label>
+          </div>
+
+          <div style="margin-top:10px">
+            <label><input type="checkbox"> Reading</label>
+            <label style="margin-left:10px"><input type="checkbox"> Music</label>
+            <label style="margin-left:10px"><input type="checkbox"> Sports</label>
+          </div>
+
+          <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:12px">
+            <button type="reset" class="secondary-btn">Reset</button>
+            <button type="submit" class="primary-btn">Create account</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Login form (simple, centered) -->
+      <div class="form-container" aria-label="Login form" style="max-width:420px;">
+        <form onsubmit="event.preventDefault(); alert('Logged in (demo)')">
+          <label>Username</label>
+          <input type="text" placeholder="username" required>
+          <label style="margin-top:8px">Password</label>
+          <input type="password" placeholder="password" required>
+          <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:12px">
+            <button type="reset" class="secondary-btn">Clear</button>
+            <button type="submit" class="primary-btn">Login</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+    <!-- GRID BOXES -->
+    <section class="container">
+      <h2>Responsive Features</h2>
+      <div class="box-grid" style="margin-top:18px">
+        <div class="box">Fast</div>
+        <div class="box">Responsive</div>
+        <div class="box">Accessible</div>
+        <div class="box">Modern</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Abhi Sharma — Built with HTML & CSS. • <a href="https://www.google.com" target="_blank" rel="noopener">Google</a>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const menu = document.querySelector('.menu');
+      if(menu.style.display === 'flex') menu.style.display = 'none';
+      else menu.style.display = 'flex';
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
