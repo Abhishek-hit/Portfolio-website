@@ -118,6 +118,49 @@
     color:var(--muted);
   
 }
+/* container  */
+.container{
+  height: 500px;
+  width: 100%;
+  display: flex;
+ justify-content: center;
+  align-items: center; 
+  background-color: rgb(241, 240, 240);
+}
+.about{
+ display: flex;
+ justify-content: space-between;
+ justify-content: center;
+  align-items: center; 
+}
+.text {
+    height: 400px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #e7eaee;
+    padding: 30px 30px;
+ 
+}
+.profile{
+    background-color: #e7eaee;
+    text-align: center;
+    height:400px;
+    width: 450px;
+    margin: 10px 10px;
+    border-radius: 10px;
+
+} 
+/* image */
+ .avatar{width:200px;height:200px;border-radius:100%;object-fit:cover;margin-top: 10px;}
+ .skills-grid{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+ }
+ h3{
+  margin: 6px 0;
+ }
+
 
   
 
