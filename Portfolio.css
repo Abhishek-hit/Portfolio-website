@@ -83,8 +83,12 @@
   opacity: 0.6;
 }
 @keyframes moveStars {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -1000px; 
+  }
 }
 /*annimation end */
 .info-in {
@@ -210,10 +214,15 @@
   background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
   animation: moveStars 100s linear infinite;
   opacity: 0.6;
+ 
 }
 @keyframes moveStars {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -1000px; 
+  }
 }
 
 .about {
@@ -222,7 +231,7 @@
   align-items: center; 
 }
 
-.text {
+/* .text {
   height: 550px;
   width: 50%;
   border-radius: 10px;
@@ -230,8 +239,37 @@
   padding: 30px 30px;
   overflow: hidden;
   color: white;
+} */
+
+/* text border rotation */
+.text {
+  padding: 15px 40px;
+   height: 550px;
+  width: 50%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  background: linear-gradient(#111, #111) padding-box,
+              linear-gradient(90deg,
+                red,
+                orange,
+                yellow,
+                lime,
+                cyan,
+                blue,
+                magenta,
+                red) border-box;
+  background-size: 300% 300%;
+  animation: borderMove 4s linear infinite;
 }
 
+@keyframes borderMove {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+/* end */
 .text h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -239,7 +277,7 @@
 
 .text p {
   font-size: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #f8f7f7;
   line-height: 1.5;
 }
@@ -281,16 +319,141 @@
     height:400px;
     width: 450px;
     margin: 10px 10px;
-    border-radius: 10px;
+  
     color: #164f9a;
-
+border-radius: 50px;
+  border: 3px solid transparent;
+  /* use annimatin start */
+  background: linear-gradient(#111, #111) padding-box,
+              linear-gradient(90deg,
+                red,
+                orange,
+                yellow,
+                lime,
+                cyan,
+                blue,
+                magenta,
+                red) border-box;
+  background-size: 300% 300%;
+  animation: borderMove 4s linear infinite;
 } 
+@keyframes borderMove {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
 /* image */
  .avatar{width:200px;height:200px;border-radius:100%;object-fit:cover;margin-top: 10px;}
  
  h3{
   margin: 6px 0;
  }
+
+/* project css */
+.project {
+  width: 100%;
+  padding: 50px 20px;
+  background: #f9fafb;
+
+}
+
+.project-inside {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  
+}
+
+.view-project {
+  width: 300px;
+  background:#acbfe5;
+  border-radius: 18px;
+  box-shadow: 0px 4px 20px rgba(107, 103, 103, 0.08);
+  padding-bottom: 20px;
+  overflow: hidden;
+  
+}
+
+.insideimg {
+  position: relative;
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.project-image {
+width: 270px;
+  max-height: 100%;
+  object-fit: cover;
+ border-radius: 14px;
+}
+
+/* Badge (Popular, New, Featured) */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.badge.popular { background: #2563eb; }
+.badge.new { background: #059669; }
+.badge.featured { background: #7c3aed; }
+
+.view-project h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 15px 8px;
+  color: #111;
+}
+
+.view-project p {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tech stack badges */
+.tech-stack {
+  margin: 0 15px 15px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.tech.html { background: #fee2e2; color: #dc2626; }
+.tech.css { background: #dbeafe; color: #2563eb; }
+.tech.js { background: #fef3c7; color: #d97706; }
+
+/* View link */
+.view-link {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.view-link:hover {
+  color: #1e40af;
+}
 
 
   
