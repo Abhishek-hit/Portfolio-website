@@ -70,6 +70,7 @@
   align-items: center;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: white;
+    position: relative;
 }
 /* info background annimation  start*/
 .info::before {
@@ -99,6 +100,8 @@
   align-items: center;
   padding: 40px;
   border-radius: 18px;
+   position: relative;
+  z-index: 1;  
 }
 
 .left-box {
@@ -146,6 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .profile-img {
@@ -204,6 +208,8 @@
   position: relative;
   overflow: hidden;
   color: #fff;
+  position: relative;
+  
 }
 .container::before {
   content: "";
@@ -229,6 +235,8 @@
   display: flex;
   justify-content: center;
   align-items: center; 
+    position: relative;
+  z-index: 1;  
 }
 
 /* .text {
@@ -344,7 +352,7 @@ border-radius: 50px;
   100% { background-position: 200% 50%; }
 }
 /* image */
- .avatar{width:200px;height:200px;border-radius:100%;object-fit:cover;margin-top: 10px;}
+ .avatar{width:200px;height:200px;border-radius:100%;object-fit:cover;margin-top: 10px;  border: 5px solid #6a5af9; }
  
  h3{
   margin: 6px 0;
@@ -373,7 +381,7 @@ border-radius: 50px;
   box-shadow: 0px 4px 20px rgba(107, 103, 103, 0.08);
   padding-bottom: 20px;
   overflow: hidden;
-  
+
 }
 
 .insideimg {
@@ -456,6 +464,21 @@ width: 270px;
 .view-link:hover {
   color: #1e40af;
 }
+.view-more{
+  text-align: center;
+  width: 150px;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 40px;
+  background:blue;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:10px;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    font-size: 20px;
+}
 
 
   
@@ -464,3 +487,89 @@ width: 270px;
   
 
   /* RESPONSIVE */
+
+
+/* --- Tablet and Smaller Laptop View (1024px se choti screen) --- */
+@media (max-width: 1024px) {
+    /* Main Containers */
+    .info-in, .text, .profile {
+        width: 90%;
+    }
+
+    /* About Section Layout */
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .text, .profile {
+        margin-bottom: 30px;
+    }
+
+    /* Projects Layout */
+    .project-inside {
+        justify-content: center;
+    }
+    .view-project {
+        width: 45%;
+    }
+}
+
+
+/* --- Mobile View (768px se choti screen) --- */
+@media (max-width: 768px) {
+    /* Basic Safety Net */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar for Mobile */
+    .nav .wrap {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Hero Section for Mobile */
+    .info, .info-in {
+        height: auto;
+    }
+    .info-in {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .left-box, .right-box {
+        width: 100%;
+    }
+    .left-box h1 {
+        font-size: 28px;
+    }
+    .right-box {
+        margin-top: 30px;
+    }
+
+    /* About Section for Mobile */
+    .text, .profile {
+        width: 90%;
+        height: auto;
+    }
+    .text {
+        padding: 25px 20px;
+    }
+
+    /* Skills Grid for Mobile */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects for Mobile */
+    .view-project {
+        width: 90%;
+        max-width: 350px;
+    }
+}
