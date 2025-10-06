@@ -492,9 +492,10 @@ width: 270px;
 /* --- Tablet and Smaller Laptop View (1024px se choti screen) --- */
 @media (max-width: 1024px) {
     /* Main Containers */
-    .info-in, .text, .profile {
+    /* .info-in, .text, .profile {
         width: 90%;
-    }
+
+    } */
 
     /* About Section Layout */
     .about {
@@ -504,6 +505,7 @@ width: 270px;
     }
     .text, .profile {
         margin-bottom: 30px;
+
     }
 
     /* Projects Layout */
@@ -512,6 +514,10 @@ width: 270px;
     }
     .view-project {
         width: 45%;
+    }
+    .project-image{
+      width: 90%;
+      margin-top: 10px;
     }
 }
 
@@ -557,7 +563,6 @@ width: 270px;
     .text, .profile {
         width: 90%;
         height: auto;
-        flex-direction: row;
     }
     .text {
         padding: 25px 20px;
@@ -571,6 +576,10 @@ width: 270px;
     /* Projects for Mobile */
     .view-project {
         width: 90%;
-        max-width: 350px;
+        max-width: 300px;
+    }
+     .project-image{
+      width: 90%;
+     
     }
 }
