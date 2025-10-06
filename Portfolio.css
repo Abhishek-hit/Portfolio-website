@@ -490,12 +490,13 @@ width: 270px;
 
 
 /* --- Tablet and Smaller Laptop View (1024px se choti screen) --- */
+/* Tablet and Smaller Laptop View (<= 1024px) — only when NOT forcing desktop */
 @media (max-width: 1024px) {
-    /* Main Containers */
-    /* .info-in, .text, .profile {
-        width: 90%;
-
-    } */
+  body:not(.force-desktop) {
+    /* Main Containers (kept commented but available) */
+    .info-in, .text, .profile {
+        width: 40%;
+    }
 
     /* About Section Layout */
     .about {
@@ -505,7 +506,7 @@ width: 270px;
     }
     .text, .profile {
         margin-bottom: 30px;
-
+        height: 90%;
     }
 
     /* Projects Layout */
@@ -519,16 +520,27 @@ width: 270px;
       width: 90%;
       margin-top: 10px;
     }
+  } /* end body:not(.force-desktop) */
 }
 
-
-/* --- Mobile View (768px se choti screen) --- */
+/* --- Mobile View (<= 768px) --- apply only when not forcing desktop */
 @media (max-width: 768px) {
+  body:not(.force-desktop) {
     /* Basic Safety Net */
     body {
         overflow-x: hidden;
     }
 
+    .info-in, .text, .profile {
+        width: 90%;
+    }
+
+    /* About Section Layout */
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
     /* Navbar for Mobile */
     .nav .wrap {
         flex-direction: column;
@@ -578,8 +590,8 @@ width: 270px;
         width: 90%;
         max-width: 300px;
     }
-     .project-image{
+    .project-image{
       width: 90%;
-     
     }
+  } /* end body:not(.force-desktop) */
 }
