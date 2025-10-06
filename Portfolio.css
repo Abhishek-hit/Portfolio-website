@@ -494,8 +494,11 @@ width: 270px;
 @media (max-width: 1024px) {
   body:not(.force-desktop) {
     /* Main Containers (kept commented but available) */
-    .info-in, .text, .profile {
-        width: 40%;
+     .text, .profile {
+        width: 50%;
+    }
+    info-in{
+      width: 90%;
     }
 
     /* About Section Layout */
@@ -514,11 +517,11 @@ width: 270px;
         justify-content: center;
     }
     .view-project {
-        width: 45%;
+        width: 30%;
     }
     .project-image{
       width: 90%;
-      margin-top: 10px;
+      margin-top: 25px;
     }
   } /* end body:not(.force-desktop) */
 }
