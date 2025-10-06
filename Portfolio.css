@@ -508,7 +508,7 @@ width: 270px;
         padding: 40px 0;
     }
     .text, .profile {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         height: 90%;
     }
 
@@ -521,7 +521,8 @@ width: 270px;
     }
     .project-image{
       width: 90%;
-      margin-top: 25px;
+      margin-top: 15px;
+      height: 90%;
     }
   } /* end body:not(.force-desktop) */
 }
@@ -595,6 +596,7 @@ width: 270px;
     }
     .project-image{
       width: 90%;
+      height: 90%;
     }
   } /* end body:not(.force-desktop) */
 }
