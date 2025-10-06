@@ -499,7 +499,7 @@ width: 270px;
 
     /* About Section Layout */
     .about {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 40px 0;
     }
