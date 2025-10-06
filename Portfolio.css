@@ -557,6 +557,7 @@ width: 270px;
     .text, .profile {
         width: 90%;
         height: auto;
+        flex-direction: row;
     }
     .text {
         padding: 25px 20px;
