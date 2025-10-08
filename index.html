@@ -28,6 +28,7 @@
     </div>
   </header>
 
+ 
   <!-- this is my personal information -->
 <section class="info">
   <div class="info-in">
@@ -38,7 +39,7 @@
         I’m a frontend developer with a passion for creating user-friendly and visually appealing websites. 
         Specialized in HTML, CSS, and JavaScript with focus on performance & clean code.
       </p>
-      <button class="btn-primary">Get in touch</button>
+      <button id="openContactModal" class="btn-primary">Get in touch</button>
         <button class="btn-primary" id="Github">Github</button>
           <button class="btn-primary">Linkedin</button>
            
@@ -197,6 +198,21 @@
   </div>
   <div class="view-more">View More</div>
 </section>
+
+
+<!--  git in touch form-->
+ <div id="contactModal" class="modal" >
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
 <script src="portfolio.js"></script>
   
 </body>

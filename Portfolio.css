@@ -259,7 +259,7 @@
   font-weight: 600;
   border-radius: 50px;
   border: 3px solid transparent;
-  background: linear-gradient(#111, #111) padding-box,
+  background: linear-gradient(#111111, #111) padding-box,
               linear-gradient(90deg,
                 red,
                 orange,
@@ -467,8 +467,8 @@ width: 270px;
 .view-more{
   text-align: center;
   width: 150px;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 45%;
+  margin-right: 60%;
   margin-top: 40px;
   background:blue;
     color:#fff;
@@ -480,6 +480,82 @@ width: 270px;
     font-size: 20px;
 }
 
+/* input form css */
+
+
+/* Modal background */
+.modal {
+   display: none;    /* isme use krne se pop hide rhega  */
+
+  position: fixed;
+  z-index: 9999; /* ise use krne se form upar show hoga */
+  left: 0; top: 0; 
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button (X) */
+.modal-content .close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+/* Form inputs */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.modal-content button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
   
 
@@ -487,8 +563,6 @@ width: 270px;
   
 
   /* RESPONSIVE */
-
-
 /* --- Tablet and Smaller Laptop View (1024px se choti screen) --- */
 /* Tablet and Smaller Laptop View (<= 1024px) — only when NOT forcing desktop */
 @media (max-width: 1024px) {
