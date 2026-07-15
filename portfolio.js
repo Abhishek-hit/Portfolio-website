@@ -2,6 +2,11 @@
     git.addEventListener("click", () => {
       window.open("https://github.com/Abhishek-hit", "_blank");
     });
+
+     const linkdin = document.getElementById("Linkedin");
+    linkdin.addEventListener("click", () => {
+      window.open("https://www.linkedin.com/in/abhishek-backenddev/", "_blank");
+    });
     
   document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("contactModal");
