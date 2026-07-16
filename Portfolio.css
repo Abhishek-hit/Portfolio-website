@@ -559,7 +559,7 @@ body {
   font-size: 11px;
   font-weight: 700;
   border-radius: 20px;
-  color: #fff;
+  color: #f7f3f3; 
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
