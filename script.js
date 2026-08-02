@@ -58,7 +58,7 @@ if (contactForm) {
 
     const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:abhishek.dev@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `abhisek539700@gmail.com?subject=${subject}&body=${body}`;
   });
 }
 
@@ -142,7 +142,7 @@ const apiCopyBtn = document.querySelector('.api-copy');
 if (apiCopyBtn) {
   apiCopyBtn.addEventListener('click', () => {
     const url = document.querySelector('.api-url').textContent;
-    navigator.clipboard?.writeText(`https://${url}`).catch(() => {});
+    navigator.clipboard?.writeText(`https://${url}`).catch(() => { });
     apiCopyBtn.classList.remove('fa-copy');
     apiCopyBtn.classList.add('fa-check');
     setTimeout(() => {
