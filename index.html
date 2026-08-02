@@ -1,437 +1,335 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Abhi Sharma — Full-Stack Java Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhishek Sharma — Full-Stack Java Developer</title>
+  <meta name="description" content="Full-stack Java developer specializing in Spring Boot, microservices and scalable backend systems." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Portfolio.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-  <!-- // <link rel="stylesheet" href="footer.css"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <header class="nav" role="banner">
-    <div class="wrap">
-      <div class="logo">Abhishek Sharma</div>
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand"><span class="bracket">&lt;/&gt;</span> Abhishek<span class="dev">.dev</span></a>
 
-      <nav aria-label="Main navigation" class="menu">
+      <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <button class="cta">Hire me</button>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <!-- this is my personal information -->
-  <section class="info">
-    <div class="info-in">
-      <div class="left-box">
-        <span class="kicker">Full-Stack Java Developer</span>
-        <h1>I'm Abhi Sharma <br> full-stack Java Developer</h1>
-        <p class="lead">
-          I’m a Full-Stack Java Developer with a passion for creating user-friendly and visually appealing websites.
-          Specialized in HTML, CSS,Java ,Springboot ,Docker, Severals Database and and also JavaScript with focus on
-          performance & clean code.
-        </p>
-        <button id="openContactModal" class="btn-primary">Get in touch</button>
-        <button class="btn-primary" id="Github">Github</button>
-        <button class="btn-primary" id="Linkedin">Linkedin</button>
-
       </div>
-      <div class="right-box">
-        <img src="abhishek.jpg" class="profile-img">
-      </div>
+
+      <a class="btn primary" href="#contact">Hire Me</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-  </section>
+  </nav>
 
+  <main id="top">
 
-  <!-- ABOUT AND PROFILE IMAGE -->
-
-  <section class="container">
-    <div class="about">
-      <div class="text">
-        <h2>About & Education</h2>
-        <p>
-          A motivated B.Tech (CSE – AI & ML) undergraduate with hands-on experience in Java,
-          Spring Boot, REST APIs, and MySQL. Passionate about backend and full-stack development,
-          with a strong focus on building secure and scalable web applications.
+    <!-- ============================== HERO ============================== -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <span class="kicker">Available for new roles</span>
+        <h1>Full-stack Java developer<br>building <em>reliable</em><br>backend systems.</h1>
+        <p class="lede">
+          I design and ship REST APIs, microservices and the data layer behind them —
+          Spring Boot on the server, React where the user needs it, Docker to move it all
+          into production without drama.
         </p>
 
-        <!-- Skills with Images -->
-        <h1>Skills</h1>
-        <div class="skills-grid">
+        <div class="hero-actions">
+          <a href="#projects" class="btn accent">View Projects</a>
+          <a href="https://github.com/Abhishek-hit" target="_blank" rel="noopener" class="btn ghost">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="btn ghost">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
 
-          <div class="skill">
-            <img src="html.png" class="skill-img">
-            <p>HTML</p>
+        <div class="stack-row">
+          <span>CORE STACK</span>
+          <div class="stack-chip"><img src="assets/java.png" alt="">Java</div>
+          <div class="stack-chip"><img src="assets/Springboot.png" alt="">Spring Boot</div>
+          <div class="stack-chip"><img src="assets/mysql.png" alt="">MySQL</div>
+          <div class="stack-chip"><img src="assets/docker.png" alt="">Docker</div>
+        </div>
+      </div>
+
+      <div class="api-showcase">
+        <div class="api-window">
+          <div class="api-window-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="api-url">api.abhishek.dev/v1/developer</span>
+            <i class="fa-regular fa-copy api-copy"></i>
           </div>
-          <div class="skill">
-            <img src="css.png" class="skill-img">
-            <p>CSS</p>
+          <div class="api-request-line">
+            <span class="method-badge">GET</span>
+            <span class="api-path">/v1/developer</span>
+            <span class="status-badge" id="statusBadge">···</span>
           </div>
-          <div class="skill">
-            <img src="JS.png" class="skill-img">
-            <p>JavaScript</p>
+          <pre class="api-body" id="apiBody"></pre>
+        </div>
+
+        <div class="api-stats-row">
+          <div class="api-stat"><span class="n" id="statUptime">0%</span><span class="l">Uptime</span></div>
+          <div class="api-stat"><span class="n" id="statReq">0</span><span class="l">Requests Served</span></div>
+          <div class="api-stat"><span class="n" id="statLatency">0ms</span><span class="l">Avg Latency</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+   
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <span class="kicker center">Technical Competencies</span>
+          <h2>Engineered for <em>Performance</em> &amp; Scalability</h2>
+        </div>
+
+        <div class="competency-grid">
+          <div class="competency-card reveal">
+            <div class="competency-head">
+              <span class="emoji">⚡</span>
+              <h3>Backend &amp; Microservices</h3>
+            </div>
+            <div class="tag-grid">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>REST APIs</span>
+              <span>Microservices</span>
+              <span>JWT Auth</span>
+              <span>Kafka</span>
+            </div>
           </div>
-          <div class="skill">
-            <img src="java.png" a class="skill-img">
-            <p>Java</p>
+
+          <div class="competency-card reveal">
+            <div class="competency-head">
+              <span class="emoji">🎨</span>
+              <h3>Frontend &amp; Modern UI</h3>
+            </div>
+            <div class="tag-grid">
+              <span>React.js</span>
+              <span>JavaScript (ES6+)</span>
+              <span>HTML5 / CSS3</span>
+              <span>Responsive Design</span>
+            </div>
           </div>
 
-          <div class="skill">
-            <img src="Springboot.png" class="skill-img">
-            <p>Springboot</p>
-          </div>
-          <div class="skill">
-            <img src="Mongodb.png" class="skill-img">
-            <p>Mongodb</p>
-          </div>
-          <div class="skill">
-            <img src="git.png" class="skill-img">
-            <p>Git</p>
-          </div>
-          <div class="skill">
-            <img src="mysql.png" class="skill-img">
-            <p>MySQL</p>
-          </div>
-          <div class="skill">
-            <img src="docker.png" class="skill-img">
-            <p>Docker</p>
-          </div>
-          <div class="skill">
-            <img src="redis.png" class="skill-img">
-            <p>Redis</p>
-          </div>
-          <div class="skill">
-            <img src="kafka.png" class="skill-img">
-            <p>Kafka</p>
-          </div>
-          <div class="skill">
-            <img src="Springboot.png" class="skill-img">
-            <p>MicroServices</p>
+          <div class="competency-card reveal">
+            <div class="competency-head">
+              <span class="emoji">🤖</span>
+              <h3>Data, Cloud &amp; Tools</h3>
+            </div>
+            <div class="tag-grid">
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+              <span>Docker</span>
+              <span>Git &amp; GitHub</span>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-
-
-      <!-- aside -->
-      <aside class="profile">
-        <img class="avatar" src="abhishek.jpg" alt="Abhi profile">
-        <h3>Abhi Sharma</h3>
-        <div style="margin-bottom: 12px; color:var(--muted);">Full-Stack Java Developer</div>
-        <div style="margin-bottom: 12px;">Location: India • Email: abhishek539700@.com</div>
-
-      </aside>
-    </div>
-  </section>
-
-
-
-  <section class="project" id="project">
-
-    <h2 class="section-title">My Creative <span class="highlight">Projects</span></h2>
-    <div class="project-inside">
-
-
-
-      <!-- Project 3 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="healup.png" class="project-image">
-          <span class="badge popular">Popular</span>
-        </div>
-        <h2>HealUp</h2>
-        <p style="height: 63px;"> A healup is a Digital platform for remote patient data and chronic condition
-          management</p>
-
-        <div class="tech-stack">
-          <span class="tech html">HTML/CSS</span>
-          <span class="tech css">Springboot</span>
-          <span class="tech js">JavaScript</span>
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <span class="kicker center">Featured Work</span>
+          <h2 class="glow-text">High-Impact Engineering Projects</h2>
         </div>
 
-        <a href="https://github.com/Abhishek-hit/HealUp.git" class="view-link">View Project Code →</a>
-      </div>
-
-
-      <!-- project five -->
-
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="verita.png" class="project-image">
-          <span class="badge featured">Featured</span>
-        </div>
-        <h2>Verita E-Commerce </h2>
-        <p style="height: 63px;">AI-powered review analysis system for sentiment and insights.</p>
-
-        <div class="tech-stack">
-          <span class="tech html">React Js</span>
-          <span class="tech css">MongoDB</span>
-          <span class="tech js">Deeplearning4j (DL4J)</span>
-          <span class="tech css">Springboot</span>
+        <div class="project-filter-row">
+          <div class="project-filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="fullstack">Full-Stack</button>
+            <button data-filter="backend">Backend</button>
+            <button data-filter="frontend">Frontend</button>
+          </div>
         </div>
 
-        <a href="https://github.com/Abhishek-hit/Verita-E-CommerceWebsite.git" class="view-link">View Project Code →</a>
-      </div>
-      <!-- project six -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="greencart.png" class="project-image">
-          <span class="badge featured">Featured</span>
-        </div>
-        <h2>Greencart</h2>
-        <p style="height: 63px;">Online grocery shopping website with product browsing, cart, and secure checkout.</p>
+        <div class="project-grid" id="projectGrid">
 
-        <div class="tech-stack">
-          <span class="tech html">RecatJs</span>
-          <span class="tech css">CSS</span>
-          <span class="tech js">MongoDB</span>
-          <span class="tech css">Springboot</span>
-        </div>
+          <article class="project-card reveal" data-cat="fullstack">
+            <div class="project-thumb">
+              <img src="assets/healup.png" alt="HealUp platform screenshot">
+              <span class="project-badge popular">Popular</span>
+            </div>
+            <div class="project-body">
+              <h3>HealUp</h3>
+              <p>A digital platform for remote patient monitoring and chronic condition management.</p>
+              <div class="tech-row"><span>Spring Boot</span><span>HTML/CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/Abhishek-hit/HealUp.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <a href="https://github.com/Abhishek-hit/Verita-E-CommerceWebsite.git" class="view-link">View Project Code →</a>
-      </div>
-      <!-- project 7 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="cosmicbharat.png" class="project-image">
-          <span class="badge featured">Featured</span>
-        </div>
-        <h2>CosmicBharat</h2>
-        <p style="height: 63px;">Informational website showcasing India's culture, heritage, and spiritual content.</p>
+          <article class="project-card reveal" data-cat="fullstack">
+            <div class="project-thumb">
+              <img src="assets/verita.png" alt="Verita e-commerce screenshot">
+              <span class="project-badge featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Verita E-Commerce</h3>
+              <p>AI-powered review analysis system for sentiment and buyer-insight extraction.</p>
+              <div class="tech-row"><span>React</span><span>Spring Boot</span><span>MongoDB</span><span>DL4J</span></div>
+              <a href="https://github.com/Abhishek-hit/Verita-E-CommerceWebsite.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <div class="tech-stack">
-          <span class="tech html">HTML</span>
-          <span class="tech css">CSS</span>
-          <span class="tech js">JavaScript</span>
-          <span class="tech css">Springboot</span>
-        </div>
+          <article class="project-card reveal" data-cat="fullstack">
+            <div class="project-thumb">
+              <img src="assets/greencart.png" alt="GreenCart screenshot">
+              <span class="project-badge featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>GreenCart</h3>
+              <p>Online grocery storefront with product browsing, cart state and secure checkout.</p>
+              <div class="tech-row"><span>React</span><span>Spring Boot</span><span>MongoDB</span></div>
+              <a href="https://github.com/Abhishek-hit/Verita-E-CommerceWebsite.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <a href="cosmic-bharat.netlify.app" class="view-link">View Project →</a>
-      </div>
-      <!-- project 8 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="fitflexhub.png" class="project-image">
-          <span class="badge featured">Featured</span>
-        </div>
-        <h2>FitFlex-Hub</h2>
-        <p style="height: 63px;">Gym management platform for member registration, bookings, and gym discovery.</p>
+          <article class="project-card reveal" data-cat="frontend">
+            <div class="project-thumb">
+              <img src="assets/cosmicbharat.png" alt="CosmicBharat screenshot">
+              <span class="project-badge featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>CosmicBharat</h3>
+              <p>Informational site showcasing India's culture, heritage and spiritual traditions.</p>
+              <div class="tech-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="https://cosmic-bharat.netlify.app" target="_blank" rel="noopener" class="project-btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <div class="tech-stack">
-          <span class="tech html">ReactJs</span>
-          <span class="tech css">CSS</span>
-          <span class="tech js">MongoDB</span>
-          <span class="tech css">Springboot</span>
-        </div>
+          <article class="project-card reveal" data-cat="fullstack">
+            <div class="project-thumb">
+              <img src="assets/fitflexhub.png" alt="FitFlex-Hub screenshot">
+              <span class="project-badge featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>FitFlex-Hub</h3>
+              <p>Gym management platform for member registration, bookings and gym discovery.</p>
+              <div class="tech-row"><span>React</span><span>Spring Boot</span><span>MongoDB</span></div>
+              <a href="http://flexfit-hub.netlify.app/" target="_blank" rel="noopener" class="project-btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <a href="http://flexfit-hub.netlify.app/" class="view-link">View Project →</a>
-      </div>
-      <!-- Project 1 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="github.png" class="project-image">
-          <span class="badge popular">Popular</span>
-        </div>
-        <h2>GitHub profile Search</h2>
-        <p style="height: 63px;">A user-friendly tool utilizing the GitHub API to instantly search,
-          and display comprehensive profile data.</p>
+          <article class="project-card reveal" data-cat="backend">
+            <div class="project-thumb">
+              <img src="assets/github.png" alt="GitHub Profile Viewer screenshot">
+              <span class="project-badge popular">Popular</span>
+            </div>
+            <div class="project-body">
+              <h3>GitHub Profile Viewer</h3>
+              <p>A tool using the GitHub API to instantly search and display profile data.</p>
+              <div class="tech-row"><span>Spring Boot</span><span>HTML/CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/Abhishek-hit/GitHub-Profile-Viewer.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <div class="tech-stack">
-          <span class="tech html">HTML/CSS</span>
-          <span class="tech css">Springboot</span>
-          <span class="tech js">JavaScript</span>
-        </div>
+          <article class="project-card reveal" data-cat="backend">
+            <div class="project-thumb">
+              <img src="assets/smartReport.png" alt="SmartReport screenshot">
+              <span class="project-badge new">New</span>
+            </div>
+            <div class="project-body">
+              <h3>SmartReport</h3>
+              <p>Real-time, photo-based civic issue reporting sent directly to local authorities.</p>
+              <div class="tech-row"><span>Spring Boot</span><span>HTML/CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/Abhishek-hit/SmartReport-bakend-code.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-        <a href="https://github.com/Abhishek-hit/GitHub-Profile-Viewer.git" class="view-link">View Project Code →</a>
-      </div>
+          <article class="project-card reveal" data-cat="frontend">
+            <div class="project-thumb">
+              <img src="assets/Amazon.png" alt="Amazon front page clone screenshot">
+              <span class="project-badge featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Amazon Front Page</h3>
+              <p>A pixel-focused clone of the Amazon landing page, built to practice layout precision.</p>
+              <div class="tech-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/Abhishek-hit/Amzon-Front-page-.git" target="_blank" rel="noopener" class="project-btn">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
 
-      <!-- Project 2 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="smartReport.png" class="project-image">
-          <span class="badge new">New</span>
-        </div>
-        <h2>SmartReport</h2>
-        <p style="height: 63px;">Real-time, photo-based civic issue reporting directly to local authorities.</p>
-
-        <div class="tech-stack">
-          <span class="tech html">HTML/CSS</span>
-          <span class="tech css">Springboot</span>
-          <span class="tech js">JavaScript</span>
-        </div>
-
-        <a href="https://github.com/Abhishek-hit/SmartReport-bakend-code.git" class="view-link">View Project Code →</a>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="view-project">
-        <div class="insideimg">
-          <img src="Amazon.png" class="project-image">
-          <span class="badge featured">Featured</span>
-        </div>
-        <h2>Amazon Front Page</h2>
-        <p style="height: 63px;">This is a Amzon Dummy Front Page...</p>
-
-        <div class="tech-stack">
-          <span class="tech html">HTML</span>
-          <span class="tech css">CSS</span>
-          <span class="tech js">JavaScript</span>
-          <span class="tech css">Springboot</span>
-        </div>
-
-        <a href="https://github.com/Abhishek-hit/Amzon-Front-page-.git" class="view-link">View Project Code →</a>
-      </div>
-    </div>
-    <div class="view-more">View More</div>
-  </section>
-
-
-  <!--  git in touch form-->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- footer -->
-
-  <footer class="footer-elegant">
-    <div class="footer-container">
-
-      <div class="footer-col brand">
-        <h3>Abhishek</h3>
-        <p>A motivated B.Tech (AI & ML) student passionate about building secure and scalable backend solutions with
-          Java, Spring Boot, and REST APIs.</p>
-      </div>
-
-
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">My Projects</a></li>
-          <li><a href="#">Skills</a></li>
-        </ul>
-      </div>
-
-
-      <div class="footer-col">
-        <h4>Expertise</h4>
-        <ul>
-          <li><a href="#">Backend Development</a></li>
-          <li><a href="#">Full-Stack Applications</a></li>
-          <li><a href="#">REST API Design</a></li>
-          <li><a href="#">Database Management (MySQL)</a></li>
-        </ul>
-      </div>
-
-
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <a href="mailto:your.email@example.com" class="contact-button">Hire Me</a>
-        <div class="social-links">
-          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Abhishek. All rights reserved. Crafted with Java, Spring Boot, and a passion for scalable
-        solutions.</p>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section" id="contact" style="border-bottom:none;">
+      <div class="wrap contact-grid">
+        <div class="contact-cta reveal">
+          <span class="kicker">Contact</span>
+          <h2>Let's build something that works <em>under load</em>.</h2>
+          <p>Open to full-stack and backend roles, freelance builds, or a good technical conversation.</p>
+
+          <div class="channel-list">
+            <a class="channel" href="mailto:abhishek.dev@gmail.com">
+              <div><div class="label">EMAIL</div><div class="value">abhishek.dev@gmail.com</div></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a class="channel" href="https://github.com/Abhishek-hit" target="_blank" rel="noopener">
+              <div><div class="label">GITHUB</div><div class="value">github.com/Abhishek-hit</div></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a class="channel" href="#">
+              <div><div class="label">LOCATION</div><div class="value">India · Remote-friendly</div></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="field">
+            <label for="cName">Name</label>
+            <input id="cName" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" name="message" rows="5" placeholder="What are you building?" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="form-note">Opens your email client with this message pre-filled.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">© 2025 Abhishek Sharma. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://github.com/Abhishek-hit" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:abhishek.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="#top" class="back-top">Back to top ↑</a>
     </div>
   </footer>
 
-
-
-  <!-- navra -->
-  <div id="modal-about" class="custom-modal">
-    <div class="custom-modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>About Me</h2>
-      <div class="modal-body">
-        <img src="abhishek.jpg" alt="Abhishek" class="modal-img">
-        <p><strong>Hello! I'm Abhishek Sharma.</strong></p>
-        <p>I am a passionate Full-Stack Java Developer pursuing B.Tech in CSE (AI & ML). I specialize in building robust
-          backend systems using <strong>Spring Boot</strong> and creating interactive frontends.</p>
-        <p>My goal is to build scalable web applications that solve real-world problems. I love coding, debugging, and
-          learning new technologies like Docker and Kafka.</p>
-
-        <div class="modal-skills">
-          <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>React</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-projects" class="custom-modal">
-    <div class="custom-modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>My Key Projects</h2>
-      <div class="modal-body">
-        <div class="project-item">
-          <h3>GitHub Profile Viewer</h3>
-          <p>A tool to fetch and display GitHub user data using APIs.</p>
-        </div>
-        <div class="project-item">
-          <h3>SmartReport</h3>
-          <p>Civic issue reporting app with geolocation features.</p>
-        </div>
-        <div class="project-item">
-          <h3>HealUp</h3>
-          <p>Telemedicine platform for patient data management.</p>
-        </div>
-        <button class="btn-primary" onclick="window.location.href='#project'">View All Details on Page</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-services" class="custom-modal">
-    <div class="custom-modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Services I Offer</h2>
-      <div class="modal-body">
-        <ul class="service-list">
-          <li><i class="fas fa-code"></i> <strong>Web Development:</strong> Full-stack websites using Java & HTML/CSS.
-          </li>
-          <li><i class="fas fa-server"></i> <strong>Backend Systems:</strong> REST API development with Spring Boot.
-          </li>
-          <li><i class="fas fa-database"></i> <strong>Database Design:</strong> Efficient SQL & MongoDB schemas.</li>
-          <li><i class="fas fa-bug"></i> <strong>Bug Fixing:</strong> Optimizing and debugging Java code.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <script src="portfolio.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
