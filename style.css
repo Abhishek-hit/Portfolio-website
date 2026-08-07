@@ -14,10 +14,9 @@
   --line-strong: rgba(255, 255, 255, 0.16);
 
   --text: #f8fafc;
-  --muted: #94a3b8;
+  --muted:#00e5ff;
   --muted-dim: #5b6579;
-
-  --accent: #00f2fe;
+  --accent: #00ffb2;
   --accent-soft: rgba(0, 242, 254, 0.12);
   --secondary: #7c3aed;
   --secondary-soft: rgba(124, 58, 237, 0.14);
@@ -130,6 +129,7 @@ h2 {
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.05;
+ 
 }
 
 h3,
@@ -137,6 +137,7 @@ h4 {
   font-family: var(--display);
   font-weight: 600;
   letter-spacing: -0.01em;
+   color: var(--warning)
 }
 
 h1 em,
@@ -158,6 +159,11 @@ h2 em,
   font-size: 0.78rem;
   color: var(--accent);
   letter-spacing: 0.04em;
+  background: rgba(0, 255, 178, 0.08);
+  border: 1px solid rgba(0, 255, 178, 0.2);
+  padding: 6px 14px;
+  border-radius: 30px;
+  /* display: inline-block; */
   text-transform: uppercase;
 }
 
@@ -700,15 +706,18 @@ h2 em,
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
 }
 
 .tag-grid span {
   font-size: 0.85rem;
-  color: var(--muted);
+  /* color: var(--muted); */
   padding: 10px 16px;
   border-radius: var(--r-sm);
   border: 1px solid var(--line-strong);
   background: transparent;
+  color: var(--muted);
+  background: rgba(0, 229, 255, 0.08);
 }
 
 .project-filter-row {
@@ -857,6 +866,7 @@ h2 em,
   border: 1px solid var(--line);
   font-size: 0.85rem;
   font-weight: 600;
+   color: var(--accent);
   transition: 0.2s ease;
 }
 
